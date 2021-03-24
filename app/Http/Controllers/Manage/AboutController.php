@@ -48,7 +48,7 @@ class AboutController extends Controller
         try {
             if($request->file('image')) {
                 $images = Storage::putFile('public/about', $request->file('image'));
-                $image = str_replace('public/', '/storage', $images);
+                $image = str_replace('public/', 'storage/', $images);
             } else {
                 $image = null;
             }
