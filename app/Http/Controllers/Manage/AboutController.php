@@ -48,7 +48,7 @@ class AboutController extends Controller
         try {
             if($request->file('image')) {
                 $images = Storage::putFile('public/about', $request->file('image'));
-                $image = str_replace('public/', '', $images);
+                $image = str_replace('public/', '/storage', $images);
             } else {
                 $image = null;
             }
@@ -124,7 +124,7 @@ class AboutController extends Controller
             DB::rollback();
 
             return redirect()->back()->with('failed', 'Failed update content because '.$th->getMessage().'');
-        }   
+        }
     }
 
     /**

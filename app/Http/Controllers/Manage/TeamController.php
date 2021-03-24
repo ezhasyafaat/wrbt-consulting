@@ -47,7 +47,7 @@ class TeamController extends Controller
         try {
             if($request->file('image')) {
                 $images = Storage::putFile('public/team', $request->file('image'));
-                $image = str_replace('public/', '', $images);
+                $image = str_replace('public/', 'storage/', $images);
             } else {
                 $image = null;
             }
@@ -80,7 +80,7 @@ class TeamController extends Controller
                 'name'          => $input['name'],
                 'position'      => $input['position'],
                 'about'         => $input['about'],
-                'short_desc'    => $input['short_desc'],       
+                'short_desc'    => $input['short_desc'],
                 'facebook_url'  => $facebook,
                 'twitter_url'   => $twitter,
                 'instagram_url' => $instagram,
