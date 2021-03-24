@@ -28,7 +28,7 @@
 <body>
 <!-- Pre Loader -->
 <div id="dvLoading"></div>
-<header class="theme-header headerfirst" data-spy="affix" data-offset-top="197"> 
+<header class="theme-header headerfirst" data-spy="affix" data-offset-top="197">
   <!--Header-Main-->
   <div class="header-main">
     <div class="container">
@@ -42,11 +42,11 @@
   <!--header-bottom-->
   <div class="header-bottom">
     <div class="container">
-      <div class="nav-outer clearfix"> 
-        <!-- Main Menu --> 
+      <div class="nav-outer clearfix">
+        <!-- Main Menu -->
         <!--Searchbox-->
         <nav class="main-menu">
-          <div class="navbar-header"> 
+          <div class="navbar-header">
             <!-- Toggle Button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
           </div>
@@ -54,7 +54,8 @@
             <ul class="navigation clearfix">
               <li><a href="{{ route('welcome') }}">Home</a></li>
               <li><a href="{{ route('page.about') }}">Tentang Kami</a></li>
-			        <li><a href="{{ route('page.service') }}">Layanan Kami</a></li>
+                <li><a href="{{ route('page.ahli') }}">Tenaga Ahli</a></li>
+                <li><a href="{{ route('page.service') }}">Layanan Kami</a></li>
               <li><a href="{{ route('page.client') }}">Daftar Klien</a></li>
               <li><a href="{{ route('page.contact') }}">Hubungi Kami</a></li>
             </ul>
@@ -64,14 +65,14 @@
         <div class="srchbox1">
           <ul class="menusearch">
             <li>
-              <div class="ex-search-bar" id="search_button1"> <i class="fa fa-search" aria-hidden="true"></i> </div>
+              <div class="ex-search-bar" id="search_button1"> <i class="fa fa-error" aria-hidden="true"></i> </div>
               <div id="search_open" class="ex-search-box">
                 <input placeholder="Search here" type="text">
                 <button><i class="fa fa-search" aria-hidden="true"></i></button>
               </div>
             </li>
           </ul>
-        </div>  
+        </div>
         <!--Quote Button-->
         {{-- <div class="quote-btn"> <a href="#" class="theme-btn quote-btn">Get a Quote</a> </div> --}}
       </div>
@@ -79,15 +80,15 @@
   </div>
   <!--Sticky Header-->
   <div class="sticky-header">
-    <div class="top-container clearfix"> 
+    <div class="top-container clearfix">
       <!--Logo-->
       <div class="logo pull-left"> <a href="index.html" class="img-responsive"><img src="{{ asset('frontend/images/logo-fixed_wrbt.png') }}" alt="Expert" title="Expert"></a> </div>
-      
+
       <!--Right Col-->
-      <div class="right-col pull-right"> 
+      <div class="right-col pull-right">
         <!-- Main Menu -->
         <nav class="main-menu">
-          <div class="navbar-header"> 
+          <div class="navbar-header">
             <!-- Toggle Button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
           </div>
@@ -95,27 +96,28 @@
             <ul class="navigation clearfix">
               <li><a href="{{ route('welcome') }}">Home</a></li>
               <li><a href="{{ route('page.about') }}">Tentang Kami</a></li>
+                <li><a href="{{ route('page.ahli') }}">Tenaga Ahli</a></li>
 			        <li><a href="{{ route('page.service') }}">Layanan Kami</a></li>
               <li><a href="{{ route('page.client') }}">Daftar Klien</a></li>
               <li><a href="{{ route('page.contact') }}">Hubungi Kami</a></li>
             </ul>
           </div>
         </nav>
-        <!-- Main Menu End--> 
+        <!-- Main Menu End-->
         <!--Searchbox-->
         <ul class="menusearch">
           <li>
-            <div class="ex-search-bar" id="search_button"> <i class="fa fa-search" aria-hidden="true"></i> </div>
+            <div class="ex-search-bar" id="search_button"> <i class="fa fa-error" aria-hidden="true"></i> </div>
             <div id="search_open1" class="ex-search-box">
               <input placeholder="Search here" type="text">
-              <button><i class="fa fa-search" aria-hidden="true"></i></button>
+              <button> </button>
             </div>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  <!--End Sticky Header--> 
+  <!--End Sticky Header-->
 </header>
 <!--Home Slider Start -->
 @yield('content')
@@ -158,7 +160,7 @@
                 <li class="dribbble"><a class="fa fa-dribbble" href="javascript:void(0)"></a></li>
               </ul>
             </div>
-            <p>&copy; Copyright 
+            <p>&copy; Copyright
               <script type="text/javascript">
           var d=new Date();
           document.write(d.getFullYear());
@@ -169,14 +171,14 @@
       </div>
     </div>
   </footer>
-  <!-- Footer End --> 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-  <script src="{{ asset('frontend/assets/jquery/jquery-3.1.1.min.js') }}"></script> 
-  <script src="{{ asset('frontend/assets/jquery/jquery.animateNumber.min.js') }}"></script> 
-  <script src="{{ asset('frontend/assets/jquery/plugins.js') }}"></script> 
-  <!-- Include all compiled plugins (below), or include individual files as needed --> 
-  <script src="{{ asset('frontend/assets/bootstrap/js/bootstrap.min.js') }}"></script> 
-  <script src="{{ asset('fronted/assets/jquery/jquery.magnific-popup.min.js') }}"></script> 
+  <!-- Footer End -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="{{ asset('frontend/assets/jquery/jquery-3.1.1.min.js') }}"></script>
+  <script src="{{ asset('frontend/assets/jquery/jquery.animateNumber.min.js') }}"></script>
+  <script src="{{ asset('frontend/assets/jquery/plugins.js') }}"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="{{ asset('frontend/assets/bootstrap/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('fronted/assets/jquery/jquery.magnific-popup.min.js') }}"></script>
   <script src="{{ asset('frontend/js/custom.js') }}"></script>
   </body>
   </html>

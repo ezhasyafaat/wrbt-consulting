@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Manage\AboutController;
+use App\Http\Controllers\Manage\AhliController;
 use App\Http\Controllers\Manage\ClientController;
 use App\Http\Controllers\Manage\ContactController;
 use App\Http\Controllers\Manage\ServiceController;
@@ -36,6 +37,10 @@ Route::get('contact-us', [App\Http\Controllers\Frontend\ContactController::class
     ->name('page.contact');
 Route::get('team/{id}', [App\Http\Controllers\Frontend\TeamController::class, 'show'])
     ->name('page.team');
+Route::get('ahli', [App\Http\Controllers\Frontend\AhliController::class, 'index'])
+    ->name('page.ahli');
+Route::get('ahli/{id}', [App\Http\Controllers\Frontend\AhliController::class, 'show'])
+    ->name('show.ahli');
 
 Route::group(['middleware' => ['auth'],'prefix' => 'manage'], function () {
 
@@ -66,7 +71,7 @@ Route::group(['middleware' => ['auth'],'prefix' => 'manage'], function () {
         ->name('client.manage.update');
     Route::get('client/delete/{id}', [ClientController::class, 'destroy'])
         ->name('client.manage.destroy');
-    
+
     //Route Contact
     Route::get('contact', [ContactController::class, 'index'])
         ->name('contact.manage.index');
@@ -80,7 +85,7 @@ Route::group(['middleware' => ['auth'],'prefix' => 'manage'], function () {
         ->name('contact.manage.update');
     Route::get('contact/delete', [ContactController::class, 'destroy'])
         ->name('contact.manage.destroy');
-    
+
     //Route Services
     Route::get('services', [ServiceController::class, 'index'])
         ->name('service.manage.index');
@@ -108,4 +113,14 @@ Route::group(['middleware' => ['auth'],'prefix' => 'manage'], function () {
         ->name('team.manage.update');
     Route::get('team/delete/{id}', [TeamController::class, 'destroy'])
         ->name('team.manage.destroy');
+
+    //Route Ahli
+    Route::get('ahli', [AhliController::class, 'index'])
+        ->name('ahli.manage.index');
+    Route::get('ahli/create', [AhliController::class, 'create'])
+        ->name('ahli.manage.create');
+    Route::post('ahli/store', [AhliController::class, 'store'])
+        ->name('ahli.manage.store');
+    Route::get('ahli/delete/{id}', [AhliController::class, 'destroy'])
+        ->name('ahli.manage.destroy');
 });

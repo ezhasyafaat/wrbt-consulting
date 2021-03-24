@@ -28,7 +28,7 @@
 <body>
 <!-- Pre Loader -->
 <div id="dvLoading"></div>
-<header class="theme-header headerfirst" data-spy="affix" data-offset-top="197"> 
+<header class="theme-header headerfirst" data-spy="affix" data-offset-top="197">
   <!--Header-Main-->
   <div class="header-main">
     <div class="container">
@@ -42,21 +42,22 @@
   <!--header-bottom-->
   <div class="header-bottom">
     <div class="container">
-      <div class="nav-outer clearfix"> 
-        <!-- Main Menu --> 
+      <div class="nav-outer clearfix">
+        <!-- Main Menu -->
         <!--Searchbox-->
         <nav class="main-menu">
-          <div class="navbar-header"> 
+          <div class="navbar-header">
             <!-- Toggle Button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
           </div>
           <div class="navbar-collapse collapse clearfix">
             <ul class="navigation clearfix">
-              <li class="current"><a href="{{ route('welcome') }}">Home</a></li>
-              <li><a href="{{ route('page.about') }}">Tentang Kami</a></li>
-			        <li><a href="{{ route('page.service') }}">Layanan Kami</a></li>
-              <li><a href="{{ route('page.client') }}">Daftar Klien</a></li>
-              <li><a href="{{ route('page.contact') }}">Hubungi Kami</a></li>
+                <li class="current"><a href="{{ route('welcome') }}">Home</a></li>
+                <li><a href="{{ route('page.about') }}">Tentang Kami</a>
+                <li><a href="{{ route('page.ahli') }}">Tenaga Ahli</a></li>
+                <li><a href="{{ route('page.service') }}">Layanan Kami</a></li>
+                <li><a href="{{ route('page.client') }}">Daftar Klien</a></li>
+                <li><a href="{{ route('page.contact') }}">Hubungi Kami</a></li>
             </ul>
           </div>
         </nav>
@@ -79,15 +80,15 @@
   </div>
   <!--Sticky Header-->
   <div class="sticky-header">
-    <div class="top-container clearfix"> 
+    <div class="top-container clearfix">
       <!--Logo-->
       <div class="logo pull-left"> <a href="index.html" class="img-responsive"><img src="{{ asset('frontend/images/logo-fixed_wrbt.png') }}" alt="Expert" title="Expert"></a> </div>
-      
+
       <!--Right Col-->
-      <div class="right-col pull-right"> 
+      <div class="right-col pull-right">
         <!-- Main Menu -->
         <nav class="main-menu">
-          <div class="navbar-header"> 
+          <div class="navbar-header">
             <!-- Toggle Button -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
           </div>
@@ -95,13 +96,14 @@
             <ul class="navigation clearfix">
               <li class="current"><a href="{{ route('welcome') }}">Home</a></li>
               <li><a href="{{ route('page.about') }}">Tentang Kami</a></li>
+                <li><a href="{{ route('page.ahli') }}">Tenaga Ahli</a></li>
 			        <li><a href="{{ route('page.service') }}">Layanan Kami</a></li>
               <li><a href="{{ route('page.client') }}">Daftar Klien</a></li>
               <li><a href="{{ route('page.contact') }}">Hubungi Kami</a></li>
             </ul>
           </div>
         </nav>
-        <!-- Main Menu End--> 
+        <!-- Main Menu End-->
         <!--Searchbox-->
         <ul class="menusearch">
           <li>
@@ -115,7 +117,7 @@
       </div>
     </div>
   </div>
-  <!--End Sticky Header--> 
+  <!--End Sticky Header-->
 </header>
 <!--Home Slider Start -->
 <div class="home-slider-area">
@@ -125,7 +127,7 @@
       <li data-target="#welcome-slide-carousel" data-slide-to="1"></li>
       <li data-target="#welcome-slide-carousel" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner" role="listbox"> 
+    <div class="carousel-inner" role="listbox">
       <!-- Start Single Slider Item -->
       <div class="item active">
         <div class="single-slide-item slide-1">
@@ -143,7 +145,7 @@
           </div>
         </div>
       </div>
-      <!-- End Single Slider Item--> 
+      <!-- End Single Slider Item-->
       <!-- Start Single Slider Item-->
       <div class="item">
         <div class="single-slide-item slide-2">
@@ -161,7 +163,7 @@
           </div>
         </div>
       </div>
-      <!-- End Single Slider Item --> 
+      <!-- End Single Slider Item -->
       <!-- Start Single Slider Item-->
       <div class="item">
         <div class="single-slide-item slide-3">
@@ -179,26 +181,26 @@
           </div>
         </div>
       </div>
-      <!-- End Single Slider Item --> 
+      <!-- End Single Slider Item -->
       <a class="left welcome-control" href="#welcome-slide-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a> <a class="right welcome-control" href="#welcome-slide-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a> </div>
   </div>
 </div>
-<!--Home Slider End --> 
+<!--Home Slider End -->
 <!--about wrapper  start -->
 <div class="home-about-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-md-7 about-text">
+      <div class="col-md-12 about-text">
         <h3>About WRBT Consulting</h3>
-          <p class="justify-align">{!! nl2br($data['about']->content) !!}</p>
-        </div>
         @if ($data['about']->image)
-          <div class="col-md-5 about-image"> <img src="{{ url($data['about']->image) }}" alt=""> </div>
+        <div class="col-md-12 about-image"> <img src="{{ url($data['about']->image) }}" alt=""> </div><br>
         @endif
+        <p class="justify-align">{!! nl2br($data['about']->content) !!}</p>
+      </div>
     </div>
   </div>
 </div>
-<!--about wrapper end --> 
+<!--about wrapper end -->
 <!-- Footer Start -->
 <footer id="footer-area">
   <div class="footer-top footer-padding">
@@ -238,7 +240,7 @@
               <li class="dribbble"><a class="fa fa-dribbble" href="javascript:void(0)"></a></li>
             </ul>
           </div>
-          <p>&copy; Copyright 
+          <p>&copy; Copyright
             <script type="text/javascript">
 		var d=new Date();
 		document.write(d.getFullYear());
@@ -249,14 +251,14 @@
     </div>
   </div>
 </footer>
-<!-- Footer End --> 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="{{ asset('frontend/assets/jquery/jquery-3.1.1.min.js') }}"></script> 
-<script src="{{ asset('frontend/assets/jquery/jquery.animateNumber.min.js') }}"></script> 
-<script src="{{ asset('frontend/assets/jquery/plugins.js') }}"></script> 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="{{ asset('frontend/assets/bootstrap/js/bootstrap.min.js') }}"></script> 
-<script src="{{ asset('fronted/assets/jquery/jquery.magnific-popup.min.js') }}"></script> 
+<!-- Footer End -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{{ asset('frontend/assets/jquery/jquery-3.1.1.min.js') }}"></script>
+<script src="{{ asset('frontend/assets/jquery/jquery.animateNumber.min.js') }}"></script>
+<script src="{{ asset('frontend/assets/jquery/plugins.js') }}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ asset('frontend/assets/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('fronted/assets/jquery/jquery.magnific-popup.min.js') }}"></script>
 <script src="{{ asset('frontend/js/custom.js') }}"></script>
 </body>
 </html>

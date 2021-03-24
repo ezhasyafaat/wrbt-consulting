@@ -23,11 +23,13 @@
   <div class="home-about-wrapper">
     <div class="container">
       <div class="row">
-        <div class="col-md-7 about-text">
+        <div class="col-md-12 about-text">
           <h3>About WRBT Consulting</h3>
-          <p align="justify">{!! $data['about']->content !!}</p>
-          </div>
-        <div class="col-md-5 about-image"> <img src="{{ url($data['about']->image) }}" alt=""> </div>
+          @if ($data['about']->image)
+          <div class="col-md-12 about-image"> <img src="{{ url($data['about']->image) }}" alt=""> </div><br>
+          @endif
+          <p class="justify-align">{!! nl2br($data['about']->content) !!}</p>
+        </div>
       </div>
     </div>
   </div>
