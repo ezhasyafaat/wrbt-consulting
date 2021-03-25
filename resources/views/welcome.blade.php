@@ -54,7 +54,7 @@
             <ul class="navigation clearfix">
                 <li class="current"><a href="{{ route('welcome') }}">Home</a></li>
                 <li><a href="{{ route('page.about') }}">Tentang Kami</a>
-                <li><a href="{{ route('page.ahli') }}">Tenaga Ahli</a></li>
+                <li><a href="{{ route('page.ahli') }}">Tenaga Ahli Afiliasi</a></li>
                 <li><a href="{{ route('page.service') }}">Layanan Kami</a></li>
                 <li><a href="{{ route('page.client') }}">Daftar Klien</a></li>
                 <li><a href="{{ route('page.contact') }}">Hubungi Kami</a></li>
@@ -96,7 +96,7 @@
             <ul class="navigation clearfix">
               <li class="current"><a href="{{ route('welcome') }}">Home</a></li>
               <li><a href="{{ route('page.about') }}">Tentang Kami</a></li>
-                <li><a href="{{ route('page.ahli') }}">Tenaga Ahli</a></li>
+                <li><a href="{{ route('page.ahli') }}">Tenaga Ahli Afiliasi</a></li>
 			        <li><a href="{{ route('page.service') }}">Layanan Kami</a></li>
               <li><a href="{{ route('page.client') }}">Daftar Klien</a></li>
               <li><a href="{{ route('page.contact') }}">Hubungi Kami</a></li>
